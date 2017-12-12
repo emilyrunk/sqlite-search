@@ -27,4 +27,4 @@ Up to Android 3.0 | Android 3.0 and higher
 
 
 ### Search Widget
-1. [Create options menu] (https://developer.android.com/guide/topics/ui/menus.html#options-menu
+1. [Create options menu] (https://developer.android.com/guide/topics/ui/menus.html#options-menu)
