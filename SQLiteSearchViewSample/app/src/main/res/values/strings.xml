@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SQLiteSearchViewSample</string>
+    <string name="search_hint">Type in word here...</string>
+    <string name="search_string">Search</string>
 </resources>

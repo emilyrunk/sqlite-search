@@ -18,9 +18,13 @@ created here in Python
 5. Search thru data.
 6. Present the results.
 
-#### Searchable Dialog or Searchable Widget
-Searchable Dialog | Searchable Widget
+#### Search Dialog or Search Widget?
+Search Dialog | Search Widget
 --- | ---
-Placed at top of Activity | Can be placed Anywhere including top of activity
+Placed at top of activity | Can be placed anywhere including top of activity
 Hiden by default | Usually used as action view in App bar
-Up to Android 3.0 | Android 3.0 and Higher
+Up to Android 3.0 | Android 3.0 and higher
+
+
+### Search Widget
+1. [Create options menu] (https://developer.android.com/guide/topics/ui/menus.html#options-menu
