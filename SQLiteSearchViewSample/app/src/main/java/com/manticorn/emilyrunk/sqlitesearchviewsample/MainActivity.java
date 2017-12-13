@@ -9,6 +9,12 @@ import android.support.v7.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuInflater;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,6 +28,31 @@ public class MainActivity extends AppCompatActivity {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             doMySearch(query);
+        }
+
+        //get context by calling "this" in activity or getActivity() in fragment
+        //call this if API level is lower than 17  String appDataPath = "/data/data/" + context.getPackageName() + "/databases/"
+        String appDataPath = this.getApplicationInfo().dataDir;
+
+        File dbFolder = new File(appDataPath + "/databases");//Make sure the /databases folder exists
+        dbFolder.mkdir();//This can be called multiple times.
+
+        File dbFilePath = new File(appDataPath + "/databases/dict.db");
+
+        try {
+            InputStream inputStream = this.getAssets().open("dict.db");
+            OutputStream outputStream = new FileOutputStream(dbFilePath);
+            byte[] buffer = new byte[1024];
+            int length;
+            while ((length = inputStream.read(buffer))>0)
+            {
+                outputStream.write(buffer, 0, length);
+            }
+            outputStream.flush();
+            outputStream.close();
+            inputStream.close();
+        } catch (IOException e){
+            //handle
         }
 
     }
