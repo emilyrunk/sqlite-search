@@ -1,8 +1,10 @@
 package com.manticorn.emilyrunk.sqlitesearchviewsample;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 /**
  * Created by emilyrunk on 12/13/17.
@@ -24,5 +26,25 @@ public class DictDatabase {
         dbHelper.close();
         database = dbHelper.getReadableDatabase();
         return this;
+    }
+
+    public void close() {
+        dbHelper.close();
+    }
+
+    public void test() {
+        try{
+            String query = "SELECT word FROM dict";
+            Cursor cursor = database.rawQuery(query,null);
+            if (cursor.moveToFirst()) {
+                do {
+                    String value = cursor.getString(0);
+                    Log.d("db", value);
+                } while (cursor.moveToNext());
+            }
+            cursor.close();
+        } catch (SQLException e){
+            //handle
+        }
     }
 }
