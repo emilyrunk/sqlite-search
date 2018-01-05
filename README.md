@@ -40,6 +40,7 @@ Up to Android 3.0 | Android 3.0 and higher
 
 
 ### Other Resources
+* [SO - Return Search activity to current activity](https://stackoverflow.com/questions/5094222/android-return-search-query-to-current-activity?answertab=votes#tab-top)
 * [ReignDesign - Using your own SQLite database in Android applications Tutorial](https://blogreigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/)
 * [Github - SQLiteAssetHelper Library](https://github.com/jgilfelt/android-sqlite-asset-helper)
 * [SO - Ship App with Database - Step by Step how to include DB](https://stackoverflow.com/questions/513084/ship-an-application-with-a-database)
