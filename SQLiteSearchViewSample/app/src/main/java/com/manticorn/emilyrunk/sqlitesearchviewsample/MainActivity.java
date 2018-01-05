@@ -7,6 +7,7 @@ import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 
@@ -24,14 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        handleIntent(getIntent());
 
 
-        //Get the intent, verify the action, get the query
-        Intent intent = getIntent();
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            String query = intent.getStringExtra(SearchManager.QUERY);
-            doMySearch(query);
-        }
+
+
 
         //get context by calling "this" in activity or getActivity() in fragment
         //call this if API level is lower than 17  String appDataPath = "/data/data/" + context.getPackageName() + "/databases/"
@@ -90,6 +88,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void handleIntent(Intent intent) {
+        //Get the intent, verify the action, get the query
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            String query = intent.getStringExtra(SearchManager.QUERY);
+            doMySearch(query);
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        setIntent(intent);
+        handleIntent(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //Inflate options menu from XML
@@ -107,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void doMySearch(String query) {
+        Log.e("DO MY SEARCH","query" + " " + query);
 
     }
 }
