@@ -34,13 +34,13 @@ Up to Android 3.0 | Android 3.0 and higher
 1. Add .db file to app assets folder:
   * Right-click app > New > Folder > Assets folder to create assets folder
 1. Sync database file into the *App's* data folder:
-  * View Toolbar > Tool Windows > Device File Explorer:
+  * View > Tool Windows > Device File Explorer:
   * Navigate to your app thru data/data and synchronize
 
 
 
 ### Other Resources
-* [ReignDesign - Using your own SQLite database in Android applications Tutorial](https://blogreigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/)  
+* [ReignDesign - Using your own SQLite database in Android applications Tutorial](https://blogreigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/)
 * [Github - SQLiteAssetHelper Library](https://github.com/jgilfelt/android-sqlite-asset-helper)
 * [SO - Ship App with Database - Step by Step how to include DB](https://stackoverflow.com/questions/513084/ship-an-application-with-a-database)
 * [SO - Using Existing Database](https://stackoverflow.com/questions/9109438/how-to-use-an-existing-database-with-an-android-application)
