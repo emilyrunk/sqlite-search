@@ -40,12 +40,8 @@ Up to Android 3.0 | Android 3.0 and higher
 
 
 ### Other Resources
-*[ReignDesign - Using your own SQLite database in Android applications Tutorial](https://blogreigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/)
-
-*[Github - SQLiteAssetHelper Library](https://github.com/jgilfelt/android-sqlite-asset-helper)
-
-*[SO - Ship App with Database - Step by Step how to include DB](https://stackoverflow.com/questions/513084/ship-an-application-with-a-database)
-
-*[SO - Using Existing Database](https://stackoverflow.com/questions/9109438/how-to-use-an-existing-database-with-an-android-application)
-
-*[Instinct Coder Guide](http://instinctcoder.com/android-studio-sqlite-search-searchview-actionbar/)
+* [ReignDesign - Using your own SQLite database in Android applications Tutorial](https://blogreigndesign.com/blog/using-your-own-sqlite-database-in-android-applications/)  
+* [Github - SQLiteAssetHelper Library](https://github.com/jgilfelt/android-sqlite-asset-helper)
+* [SO - Ship App with Database - Step by Step how to include DB](https://stackoverflow.com/questions/513084/ship-an-application-with-a-database)
+* [SO - Using Existing Database](https://stackoverflow.com/questions/9109438/how-to-use-an-existing-database-with-an-android-application)
+* [Instinct Coder Guide](http://instinctcoder.com/android-studio-sqlite-search-searchview-actionbar/)
