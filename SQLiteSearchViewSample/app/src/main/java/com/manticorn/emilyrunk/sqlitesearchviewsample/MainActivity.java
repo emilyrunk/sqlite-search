@@ -3,6 +3,7 @@ package com.manticorn.emilyrunk.sqlitesearchviewsample;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
@@ -39,10 +40,10 @@ public class MainActivity extends AppCompatActivity {
         File dbFolder = new File(appDataPath + "/databases");//Make sure the /databases folder exists
         dbFolder.mkdir();//This can be called multiple times.
 
-        File dbFilePath = new File(appDataPath + "/databases/dict.db");
+        File dbFilePath = new File(appDataPath + "/databases/dict.db"); //***insert your db name***
 
         try {
-            InputStream inputStream = this.getAssets().open("dict.db");
+            InputStream inputStream = this.getAssets().open("dict.db"); //***insert your db name***
             OutputStream outputStream = new FileOutputStream(dbFilePath);
             byte[] buffer = new byte[1024];
             int length;
@@ -56,8 +57,33 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e){
             //handle
         }
+//
+        DatabaseOpenHelper myDbHelper = new DatabaseOpenHelper(this);
+        try {
+
+            myDbHelper.createDataBase();
+
+        } catch (IOException ioe) {
+
+            throw new Error("Unable to create database");
+
+        }
+
+        try {
+
+            myDbHelper.openDataBase();
+
+        }catch(SQLException sqle){
+
+            throw sqle;
+
+        }
+
+        myDbHelper.close();
+
 
         DictDatabase db = new DictDatabase(this);
+
         db.open();
         db.test();
         db.close();

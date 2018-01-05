@@ -23,7 +23,7 @@ public class DictDatabase {
 
     public DictDatabase open() throws SQLException {
         dbHelper.openDataBase();
-        dbHelper.close();
+//        dbHelper.close();
         database = dbHelper.getReadableDatabase();
         return this;
     }
@@ -35,6 +35,7 @@ public class DictDatabase {
     public void test() {
         try{
             String query = "SELECT word FROM dict";
+            //"word" is the name of the column, "dict" is the name of the table
             Cursor cursor = database.rawQuery(query,null);
             if (cursor.moveToFirst()) {
                 do {
