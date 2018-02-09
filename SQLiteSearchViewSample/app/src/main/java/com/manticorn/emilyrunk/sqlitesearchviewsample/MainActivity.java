@@ -16,8 +16,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    DictDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +82,11 @@ public class MainActivity extends AppCompatActivity {
         myDbHelper.close();
 
 
-        DictDatabase db = new DictDatabase(this);
+        db = new DictDatabase(this);
 
         db.open();
         db.test();
-        db.close();
+//        db.close();
 
     }
 
@@ -119,7 +121,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void doMySearch(String query) {
-        Log.e("DO MY SEARCH","query" + " " + query);
+        ArrayList<String> listOfResults =  db.search(query);
+        Log.e("DO MY SEARCH", String.valueOf(listOfResults));
+
+
 
     }
 }

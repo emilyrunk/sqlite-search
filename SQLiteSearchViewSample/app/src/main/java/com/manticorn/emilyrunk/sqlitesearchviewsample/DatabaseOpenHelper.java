@@ -62,7 +62,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         return checkDB !=null ? true : false;
     }
 
-    //Copies database from device asests folder to the newly created empty database in system folder so it can be
+    //Copies database from device assets folder to the newly created empty database in system folder so it can be
     // accessed and handled
 
     private void copyDataBase()  throws IOException {

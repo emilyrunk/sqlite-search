@@ -46,3 +46,5 @@ Up to Android 3.0 | Android 3.0 and higher
 * [SO - Ship App with Database - Step by Step how to include DB](https://stackoverflow.com/questions/513084/ship-an-application-with-a-database)
 * [SO - Using Existing Database](https://stackoverflow.com/questions/9109438/how-to-use-an-existing-database-with-an-android-application)
 * [Instinct Coder Guide](http://instinctcoder.com/android-studio-sqlite-search-searchview-actionbar/)
+* [MIT Android Training Docs - Storing & Searching for Data](https://stuff.mit.edu/afs/sipb/project/android/docs/training/search/search.html)
+* [Android Developer Fundamentals Course - Searching Sqlite Database](https://google-developer-training.gitbooks.io/android-developer-fundamentals-course-practicals/content/en/Unit%204/101b_p_searching_an_sqlite_database.html)
